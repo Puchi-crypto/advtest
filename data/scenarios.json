@@ -1,0 +1,323 @@
+[
+  {
+    "characterId": "childhood_friend",
+    "name": "幼なじみ",
+    "difficulty": "初級",
+    "tagline": "嘘が下手で、昔から知っている情報がヒントになる。",
+    "profile": "昔から隣にいた、明るくて少し抜けている恋人。最近だけ妙に予定が曖昧。",
+    "maxGauge": 3,
+    "requiredEvidence": 3,
+    "assets": {
+      "standing": "assets/characters/childhood_friend/standing.svg",
+      "lineIcon": "assets/characters/childhood_friend/line_icon.svg",
+      "secretIcon": "assets/characters/childhood_friend/secret_icon.svg"
+    },
+    "endings": {
+      "clear": "集めた三つの矛盾を並べると、彼女はスマホを伏せたまま黙り込んだ。幼なじみだからこそ見逃さなかった違和感が、言い逃れを終わらせた。",
+      "gameOver": "疑いは空回りし、彼女は『昔からそうやって決めつけるよね』と距離を置いた。核心に届く前に、関係だけが壊れてしまった。"
+    },
+    "turns": [
+      {
+        "turnId": 1,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は早く寝るね。明日朝からバイトだし" }
+        ],
+        "secretPosts": [
+          { "postId": "p1", "text": "終電ギリだった、楽しかったけど眠い。夜風で髪ぐちゃぐちゃ" },
+          { "postId": "p2", "text": "新しいリップ、写真だと色が濃く見えるな" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "p1",
+        "evidenceLabel": "寝ると言っていたのに終電まで外出していた",
+        "replyChoices": [
+          { "id": "normal_1", "text": "おやすみ、ゆっくり休んで", "type": "normal" },
+          { "id": "accuse_1", "text": "早く寝るって言ってたのに、終電ギリって何？", "type": "accuse" },
+          { "id": "accuse_wrong_1", "text": "リップの写真、誰に見せるため？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "accuse_1",
+        "successReaction": "え、いや……ちょっとコンビニ行っただけ、って言うには遠いよね……ごめん。",
+        "failReaction": "急にどうしたの？寝る前に責められるの、ちょっと怖いよ。",
+        "explanation": "LINEでは早く寝ると言っていたが、裏垢では終電ギリギリまで外出していた。"
+      },
+      {
+        "turnId": 2,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は甘いもの気分じゃないから、カフェはまた今度にしよ" }
+        ],
+        "secretPosts": [
+          { "postId": "p3", "text": "彼に教えてもらった限定パフェ最高。甘すぎるくらいが幸せ" },
+          { "postId": "p4", "text": "駅前の花、もう少しで満開かも" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "p3",
+        "evidenceLabel": "甘いものを避けた直後に限定パフェを楽しんでいた",
+        "replyChoices": [
+          { "id": "normal_2", "text": "そっか、じゃあまた今度行こう", "type": "normal" },
+          { "id": "accuse_2", "text": "甘いもの気分じゃないのに、限定パフェは食べたんだ？", "type": "accuse" },
+          { "id": "accuse_wrong_2", "text": "駅前の花を誰と見たの？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "accuse_2",
+        "successReaction": "それは……誘われて、断れなくて。『彼』って書いたのは、ただの友達。",
+        "failReaction": "カフェ断っただけでそんな言い方する？疲れてるって言ったじゃん。",
+        "explanation": "LINEではカフェを避けたのに、裏垢では別の相手に教わった限定パフェを楽しんでいた。"
+      },
+      {
+        "turnId": 3,
+        "lineMessages": [
+          { "speaker": "target", "text": "放課後はずっと家で妹の宿題見てたよ" }
+        ],
+        "secretPosts": [
+          { "postId": "p5", "text": "助手席で聴く知らない曲って、なんでこんなにドキドキするんだろ" },
+          { "postId": "p6", "text": "妹から『数学わからん』って通知きてた。あとで返す" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "p5",
+        "evidenceLabel": "家で妹を見ていたはずが車の助手席にいた",
+        "replyChoices": [
+          { "id": "normal_3", "text": "妹ちゃんの宿題、おつかれさま", "type": "normal" },
+          { "id": "accuse_3", "text": "家にいたのに、助手席で知らない曲を聴いてたの？", "type": "accuse" },
+          { "id": "accuse_wrong_3", "text": "妹ちゃんの数学、まだ返してないの？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "accuse_3",
+        "successReaction": "……三つも見てたんだ。もう、いつもの冗談じゃ済まないよね。",
+        "failReaction": "妹のことまで疑うの？そういうの、本当に嫌。",
+        "explanation": "LINEでは家で妹を見ていたと言ったが、裏垢では車の助手席にいたことを示している。"
+      },
+      {
+        "turnId": 4,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は本当に何もなくて、まっすぐ帰ったよ" }
+        ],
+        "secretPosts": [
+          { "postId": "p7", "text": "夕焼けがきれい。こういう普通の日も悪くない" },
+          { "postId": "p8", "text": "明日は早起き、寝坊しませんように" }
+        ],
+        "hasContradiction": false,
+        "correctEvidencePostId": null,
+        "evidenceLabel": "異変なし",
+        "replyChoices": [
+          { "id": "normal_4", "text": "平和な日でよかった。明日も頑張ろ", "type": "normal" },
+          { "id": "accuse_4", "text": "本当にまっすぐ帰った証拠ある？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": null,
+        "successReaction": "うん。今日は本当に普通の日だったよ。疑われないって、少しほっとする。",
+        "failReaction": "何もない日まで疑うなら、もう何を言っても無駄だよ。",
+        "explanation": "このターンにはLINEと裏垢の内容に明確な矛盾はない。普通に返事するのが正解。"
+      }
+    ]
+  },
+  {
+    "characterId": "gal",
+    "name": "ギャル",
+    "difficulty": "中級",
+    "tagline": "SNS慣れしていて、匂わせ投稿と言い訳が多い。",
+    "profile": "眠そうな目で軽く流すダウナーギャル。投稿は消す前提で、言葉選びが妙に巧い。",
+    "maxGauge": 3,
+    "requiredEvidence": 3,
+    "assets": {
+      "standing": "assets/characters/gal/standing.svg",
+      "lineIcon": "assets/characters/gal/line_icon.svg",
+      "secretIcon": "assets/characters/gal/secret_icon.svg"
+    },
+    "endings": {
+      "clear": "匂わせの点を線にして突きつけると、彼女の余裕は初めて崩れた。『そこまで見てたんだ』という一言が、答えだった。",
+      "gameOver": "彼女は曖昧な笑いで話題を流し、裏垢の投稿も消えていった。疑念だけが残り、証拠は霧のようにほどけた。"
+    },
+    "turns": [
+      {
+        "turnId": 1,
+        "lineMessages": [
+          { "speaker": "target", "text": "今夜は女子会。終わったら秒で帰るし、心配しないで" }
+        ],
+        "secretPosts": [
+          { "postId": "g1", "text": "運転ありがと。助手席で寝落ちしそうだった、香水ずるい" },
+          { "postId": "g2", "text": "盛れた写真は明日だけ上げる。今日は鍵だけ" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "g1",
+        "evidenceLabel": "女子会のはずが車で送られていた",
+        "replyChoices": [
+          { "id": "g_normal_1", "text": "楽しんできて。帰り気をつけて", "type": "normal" },
+          { "id": "g_accuse_1", "text": "女子会なのに、誰の車の助手席で寝落ちしそうだったの？", "type": "accuse" },
+          { "id": "g_accuse_wrong_1", "text": "鍵垢で何を隠してるの？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "g_accuse_1",
+        "successReaction": "あー……女友達の彼氏が送ってくれただけ。変な意味じゃないって。",
+        "failReaction": "女子会って言っただけで監視？重いんだけど。",
+        "explanation": "LINEでは女子会と説明したが、裏垢では香水に触れながら助手席で送られたことを匂わせている。"
+      },
+      {
+        "turnId": 2,
+        "lineMessages": [
+          { "speaker": "target", "text": "今月まじ金欠。プレゼントとか期待しないでね" }
+        ],
+        "secretPosts": [
+          { "postId": "g3", "text": "また奢ってもらった。会計で財布出す隙もなかった、慣れてる人こわ" },
+          { "postId": "g4", "text": "ネイル伸びてきた。次は暗めにしよ" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "g3",
+        "evidenceLabel": "金欠なのに別の相手に奢られていた",
+        "replyChoices": [
+          { "id": "g_normal_2", "text": "無理しなくていいよ。節約しよ", "type": "normal" },
+          { "id": "g_accuse_2", "text": "金欠って言いながら、誰にまた奢ってもらったの？", "type": "accuse" },
+          { "id": "g_accuse_wrong_2", "text": "ネイル代はどこから出すの？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "g_accuse_2",
+        "successReaction": "ご飯くらい別にいいじゃん。こっちから頼んだわけじゃないし。",
+        "failReaction": "金欠の話とそれ関係なくない？話飛びすぎ。",
+        "explanation": "金欠を理由に距離を取る一方、裏垢では別の相手に奢られたことを投稿している。"
+      },
+      {
+        "turnId": 3,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は家で配信見てた。外出る気力ゼロ" }
+        ],
+        "secretPosts": [
+          { "postId": "g5", "text": "ホテルのロビー、照明だけは優勝。写真は顔出しNGで" },
+          { "postId": "g6", "text": "推しの配信アーカイブ追う、明日でいいか" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "g5",
+        "evidenceLabel": "家で配信を見ていたはずがホテルのロビーにいた",
+        "replyChoices": [
+          { "id": "g_normal_3", "text": "配信ゆっくり見られてよかったね", "type": "normal" },
+          { "id": "g_accuse_3", "text": "家にいたのに、ホテルのロビーの写真はどういうこと？", "type": "accuse" },
+          { "id": "g_accuse_wrong_3", "text": "推しの配信、まだ見てないんじゃない？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "g_accuse_3",
+        "successReaction": "……それまで拾う？もう言い訳きついわ。ちょっとだけ会ってた。",
+        "failReaction": "配信の話で詰めるの、普通に意味わかんない。",
+        "explanation": "LINEでは家にいたと言ったが、裏垢ではホテルのロビーにいたことを示している。"
+      },
+      {
+        "turnId": 4,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は早めに寝る。通知も切るね" }
+        ],
+        "secretPosts": [
+          { "postId": "g7", "text": "明日の服、黒かグレーで迷う" },
+          { "postId": "g8", "text": "眠い日は考えすぎないのがいちばん" }
+        ],
+        "hasContradiction": false,
+        "correctEvidencePostId": null,
+        "evidenceLabel": "異変なし",
+        "replyChoices": [
+          { "id": "g_normal_4", "text": "了解。ゆっくり寝てね", "type": "normal" },
+          { "id": "g_accuse_4", "text": "通知切るの、誰かといるから？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": null,
+        "successReaction": "ん、ありがと。そういう返しなら普通に安心する。",
+        "failReaction": "通知切るだけでそれ？もう息できないじゃん。",
+        "explanation": "通知を切る発言と服選び・眠気の投稿だけでは、明確な浮気の矛盾とは言えない。"
+      }
+    ]
+  },
+  {
+    "characterId": "married_woman",
+    "name": "人妻",
+    "difficulty": "上級",
+    "tagline": "自然な嘘と罪悪感の誘導で、疑う側を悪者にする。",
+    "profile": "品のある小悪魔的な成人女性。柔らかい言葉で距離を詰め、都合の悪さを優しさに包む。",
+    "maxGauge": 3,
+    "requiredEvidence": 3,
+    "assets": {
+      "standing": "assets/characters/married_woman/standing.svg",
+      "lineIcon": "assets/characters/married_woman/line_icon.svg",
+      "secretIcon": "assets/characters/married_woman/secret_icon.svg"
+    },
+    "endings": {
+      "clear": "三つ目の証拠を告げると、彼女は初めて微笑みを消した。家庭、通知、香り――整いすぎた言い訳は、もう彼女を守れなかった。",
+      "gameOver": "彼女は『信じてくれないなら仕方ないわね』と静かに会話を閉じた。あなたは責める言葉だけを残され、核心は彼女の掌の中に戻った。"
+    },
+    "turns": [
+      {
+        "turnId": 1,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は家族で外食なの。連絡遅くなっても許してね" }
+        ],
+        "secretPosts": [
+          { "postId": "m1", "text": "久しぶりに女でいられた夜。名前で呼ばれるの、まだ少し慣れない" },
+          { "postId": "m2", "text": "赤ワインは一杯だけ。明日の朝が早いから" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "m1",
+        "evidenceLabel": "家族外食のはずが恋愛めいた夜を匂わせた",
+        "replyChoices": [
+          { "id": "m_normal_1", "text": "家族時間、大事にしてね", "type": "normal" },
+          { "id": "m_accuse_1", "text": "家族で外食なのに、『女でいられた夜』ってどういう意味？", "type": "accuse" },
+          { "id": "m_accuse_wrong_1", "text": "赤ワイン一杯だけって本当？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "m_accuse_1",
+        "successReaction": "そんな言葉まで拾うのね。少し酔って、詩みたいに書いただけよ。",
+        "failReaction": "家族の時間まで疑われると、私が悪いことをしているみたいね。",
+        "explanation": "LINEでは家族との外食と説明したが、裏垢では別の相手に女性として扱われた夜を示唆している。"
+      },
+      {
+        "turnId": 2,
+        "lineMessages": [
+          { "speaker": "target", "text": "今夜は連絡できないの。家のことで少し慌ただしくて" }
+        ],
+        "secretPosts": [
+          { "postId": "m3", "text": "通知切って正解。誰にも邪魔されない時間って、こんなに静か" },
+          { "postId": "m4", "text": "新しいピアス、思ったより光る。昼より夜向き" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "m3",
+        "evidenceLabel": "家の用事ではなく邪魔されない時間を作っていた",
+        "replyChoices": [
+          { "id": "m_normal_2", "text": "大変だね。落ち着いたら連絡して", "type": "normal" },
+          { "id": "m_accuse_2", "text": "家の用事なら、どうして『通知切って正解』なの？", "type": "accuse" },
+          { "id": "m_accuse_wrong_2", "text": "そのピアス、誰に見せるの？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "m_accuse_2",
+        "successReaction": "あなたの通知で家族に勘づかれたら困るでしょう？……そういう意味よ。",
+        "failReaction": "慌ただしい夜にまで疑われたら、息が詰まってしまうわ。",
+        "explanation": "連絡できない理由を家の用事としたが、裏垢では意図的に通知を切り、誰にも邪魔されない時間を作っていた。"
+      },
+      {
+        "turnId": 3,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は子どもの習い事の送迎だけ。すぐ帰るわ" }
+        ],
+        "secretPosts": [
+          { "postId": "m5", "text": "助手席に残った煙草の匂い、帰る前に消さなきゃ。私は吸わないのに" },
+          { "postId": "m6", "text": "待ち時間のコーヒー、熱すぎて飲めない" }
+        ],
+        "hasContradiction": true,
+        "correctEvidencePostId": "m5",
+        "evidenceLabel": "送迎だけのはずが喫煙者の車に同乗していた",
+        "replyChoices": [
+          { "id": "m_normal_3", "text": "送迎おつかれさま。気をつけて帰って", "type": "normal" },
+          { "id": "m_accuse_3", "text": "送迎だけなのに、助手席の煙草の匂いを消す必要がある？", "type": "accuse" },
+          { "id": "m_accuse_wrong_3", "text": "コーヒーを誰と飲んだの？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": "m_accuse_3",
+        "successReaction": "……あなた、優しいだけじゃないのね。もうごまかせないかもしれない。",
+        "failReaction": "送迎の待ち時間くらい、一人で過ごしても責められるの？",
+        "explanation": "送迎だけですぐ帰ると言ったが、裏垢では喫煙者の車の助手席にいた痕跡を消そうとしている。"
+      },
+      {
+        "turnId": 4,
+        "lineMessages": [
+          { "speaker": "target", "text": "今日は早く休むわ。少し頭痛がするの" }
+        ],
+        "secretPosts": [
+          { "postId": "m7", "text": "薬を飲んだら少し落ち着いた。静かな夜で助かった" },
+          { "postId": "m8", "text": "窓を開けたら雨の匂い。眠れそう" }
+        ],
+        "hasContradiction": false,
+        "correctEvidencePostId": null,
+        "evidenceLabel": "異変なし",
+        "replyChoices": [
+          { "id": "m_normal_4", "text": "無理しないで。お大事に", "type": "normal" },
+          { "id": "m_accuse_4", "text": "静かな夜って、誰かといる隠語？", "type": "accuse" }
+        ],
+        "correctAccuseChoiceId": null,
+        "successReaction": "ありがとう。そう言ってもらえると、少し楽になるわ。",
+        "failReaction": "体調が悪い時まで疑うのね。あなたを頼った私がいけなかったのかしら。",
+        "explanation": "頭痛、薬、雨の匂いは自然につながっており、このターンに明確な矛盾はない。"
+      }
+    ]
+  }
+]

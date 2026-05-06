@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="浮気異変発見ゲーム アイコン">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18112a"/><stop offset=".55" stop-color="#ff5f9e"/><stop offset="1" stop-color="#79ffe1"/></linearGradient></defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <circle cx="256" cy="240" r="136" fill="#fff3ff" opacity=".96"/>
+  <circle cx="204" cy="222" r="22" fill="#18112a"/><circle cx="308" cy="222" r="22" fill="#18112a"/>
+  <path d="M184 318c48 24 96 24 144 0" fill="none" stroke="#18112a" stroke-width="20" stroke-linecap="round" opacity=".9"/>
+  <path d="M120 116 392 396" stroke="#79ffe1" stroke-width="34" stroke-linecap="round"/>
+  <text x="256" y="464" text-anchor="middle" font-family="sans-serif" font-size="58" font-weight="900" fill="#fff">証拠</text>
+</svg>
