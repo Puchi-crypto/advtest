@@ -46,7 +46,7 @@ function renderStart() {
       <section class="hero">
         <div class="eyebrow">Suspense Text Detective</div>
         <h1>浮気異変<br>発見ゲーム</h1>
-        <p class="lead">右のLINE風チャットと左の裏垢SNSを読み比べ、発言と投稿の矛盾を見つけてください。証拠を三つ集めれば相手は言い逃れできません。</p>
+        <p class="lead">右のLINE風チャットと左の裏垢SNSを読み比べ、発言と投稿の矛盾を見つけてください。画像ではなく、会話・投稿・設定文だけから相手の違和感を推理します。</p>
         <button class="primary-btn" data-action="select">キャラを選ぶ</button>
       </section>
     </main>`;
@@ -60,16 +60,21 @@ function renderCharacterSelect() {
       <section class="select-header">
         <button class="ghost-btn" data-action="back">← タイトルへ</button>
         <h1>相手を選ぶ</h1>
-        <p class="lead">難易度が上がるほど、裏垢の匂わせは自然で、LINEの言い訳も巧妙になります。</p>
+        <p class="lead">相手の見た目ではなく、関係性・口癖・最近の変化をまとめた設定文から選びます。難易度が上がるほど、裏垢の匂わせは自然で、LINEの言い訳も巧妙になります。</p>
       </section>
       <section class="character-grid">
         ${state.scenarios.map((scenario) => `
           <article class="character-card">
-            <img src="${scenario.assets.standing}" alt="${scenario.name}の立ち絵" />
-            <span class="badge">${scenario.difficulty}</span>
-            <h2>${scenario.name}</h2>
-            <p>${scenario.profile}</p>
-            <p>${scenario.tagline}</p>
+            <div class="character-card-head">
+              <span class="text-avatar" aria-hidden="true">${escapeHtml(scenario.name.slice(0, 1))}</span>
+              <div>
+                <span class="badge">${escapeHtml(scenario.difficulty)}</span>
+                <h2>${escapeHtml(scenario.name)}</h2>
+              </div>
+            </div>
+            <p class="profile-text">${escapeHtml(scenario.profile)}</p>
+            <p class="setting-text">${escapeHtml(scenario.setting || scenario.tagline)}</p>
+            <p class="tagline-text">推理の焦点：${escapeHtml(scenario.tagline)}</p>
             <button class="primary-btn" data-character="${scenario.characterId}">この相手で始める</button>
           </article>`).join('')}
       </section>
@@ -110,10 +115,10 @@ function renderGame() {
       <section class="game-frame">
         <header class="status-bar">
           <div class="avatar-wrap">
-            <img src="${character.assets.standing}" alt="${character.name}の立ち絵" />
+            <span class="text-avatar status-avatar" aria-hidden="true">${escapeHtml(character.name.slice(0, 1))}</span>
             <div class="name-block">
-              <strong>${character.name}</strong>
-              <span>${character.difficulty} / ${character.tagline}</span>
+              <strong>${escapeHtml(character.name)}</strong>
+              <span>${escapeHtml(character.difficulty)} / ${escapeHtml(character.tagline)}</span>
             </div>
           </div>
           <div>
@@ -132,13 +137,13 @@ function renderGame() {
             <div class="feed">
               ${turn.secretPosts.map((post) => `
                 <button class="post-card ${state.selectedPostId === post.postId ? 'selected' : ''}" data-post="${post.postId}">
-                  <div class="post-head"><img src="${character.assets.secretIcon}" alt="裏垢アイコン" /><span>鍵付き投稿 #${post.postId}</span></div>
+                  <div class="post-head"><span class="text-avatar mini-avatar" aria-hidden="true">鍵</span><span>鍵付き投稿 #${escapeHtml(post.postId)}</span></div>
                   <div class="post-text">${escapeHtml(post.text)}</div>
                 </button>`).join('')}
             </div>
           </section>
           <section class="panel line-panel ${state.activeTab === 'line' ? 'active' : ''}" aria-label="LINE風チャット">
-            <div class="panel-title line-title"><span>LINE</span><span>${character.name}</span></div>
+            <div class="panel-title line-title"><span>LINE</span><span>${escapeHtml(character.name)}</span></div>
             <div class="chat">
               ${turn.lineMessages.map((message) => chatBubble(message, character)).join('')}
               ${state.history.map((message) => chatBubble(message, character)).join('')}
@@ -186,7 +191,7 @@ function chatBubble(message, character) {
   const isTarget = message.speaker === 'target';
   return `
     <div class="chat-row ${isTarget ? 'target' : 'player'}">
-      ${isTarget ? `<img class="bubble-icon" src="${character.assets.lineIcon}" alt="LINEアイコン" />` : ''}
+      ${isTarget ? `<span class="text-avatar mini-avatar bubble-icon" aria-hidden="true">${escapeHtml(character.name.slice(0, 1))}</span>` : ''}
       <div class="bubble">${escapeHtml(message.text)}</div>
     </div>`;
 }
