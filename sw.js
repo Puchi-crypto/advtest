@@ -1,4 +1,4 @@
-const CACHE_NAME = 'uwaki-detective-v1';
+const CACHE_NAME = 'uwaki-detective-v2';
 const APP_SHELL = [
   './',
   './index.html',
