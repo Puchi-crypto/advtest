@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" role="img" aria-label="人妻の立ち絵">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#331f31"/><stop offset="1" stop-color="#ff5f9e"/></linearGradient>
+    <radialGradient id="spot" cx="50%" cy="30%" r="70%"><stop stop-color="rgba(255,255,255,.28)"/><stop offset="1" stop-color="rgba(255,255,255,0)"/></radialGradient>
+  </defs>
+  <rect width="420" height="560" rx="34" fill="url(#bg)"/>
+  <circle cx="210" cy="170" r="170" fill="url(#spot)"/>
+  <ellipse cx="210" cy="468" rx="132" ry="92" fill="#79264d"/>
+  <rect x="126" y="330" width="168" height="156" rx="64" fill="#79264d"/>
+  <path d="M128 210c0-86 42-140 82-140s82 54 82 140c0 76-35 142-82 142s-82-66-82-142Z" fill="#301e2a"/>
+  <ellipse cx="210" cy="210" rx="72" ry="84" fill="#ffcdb2"/>
+  <path d="M146 166c28-58 88-78 128-14-18-9-36-12-57-6-31 8-50 18-71 20Z" fill="#76324a"/>
+  <path d="M142 190c25-58 41-75 72-89-16 42-28 75-72 89Zm136 0c-18-48-40-78-67-92 10 46 25 78 67 92Z" fill="#301e2a" opacity=".95"/>
+  <ellipse cx="184" cy="210" rx="7" ry="5" fill="#241c26"/><ellipse cx="236" cy="210" rx="7" ry="5" fill="#241c26"/>
+  <path d="M190 250c15 12 30 12 45 0" fill="none" stroke="#9d4d64" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="278" cy="190" r="14" fill="#e7c174"/><circle cx="142" cy="190" r="14" fill="#e7c174"/>
+  <path d="M137 382 76 456M283 382l61 74" stroke="#ffcdb2" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="210" cy="402" r="22" fill="#e7c174" opacity=".9"/>
+  <text x="210" y="530" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fff" opacity=".9">人妻</text>
+</svg>

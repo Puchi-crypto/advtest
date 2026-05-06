@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="ギャルのLINEアイコン">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b2041"/><stop offset="1" stop-color="#ff5ca2"/></linearGradient></defs>
+  <circle cx="96" cy="96" r="94" fill="url(#bg)"/>
+  
+  <ellipse cx="96" cy="104" rx="56" ry="62" fill="#f0cc68"/>
+  <ellipse cx="96" cy="101" rx="43" ry="48" fill="#ecb084"/>
+  <path d="M54 82c17-41 57-52 84-9-27-10-49-6-84 9Z" fill="#7653a9"/>
+  <ellipse cx="78" cy="101" rx="5" ry="4" fill="#241c26"/><ellipse cx="114" cy="101" rx="5" ry="4" fill="#241c26"/>
+  <path d="M83 127c9 7 18 7 27 0" fill="none" stroke="#9d4d64" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="142" cy="76" r="10" fill="#ff5ca2"/>
+  
+</svg>
