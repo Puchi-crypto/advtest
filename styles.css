@@ -86,9 +86,17 @@ button:not(:disabled):hover { transform: translateY(-1px); }
   display: grid;
   gap: 12px;
 }
-.character-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: contain; border-radius: 20px; background: rgba(0,0,0,0.18); }
-.character-card h2 { margin: 0; }
+.character-card-head { display: flex; align-items: center; gap: 12px; }
+.character-card h2 { margin: 6px 0 0; }
 .character-card p { color: var(--muted); line-height: 1.7; margin: 0; }
+.setting-text {
+  color: var(--text);
+  border-left: 3px solid var(--accent-2);
+  padding-left: 12px;
+  background: rgba(121,255,225,0.07);
+  border-radius: 0 14px 14px 0;
+}
+.tagline-text { font-size: 0.94rem; }
 .badge { display: inline-flex; width: fit-content; padding: 5px 10px; border-radius: 999px; background: rgba(255,95,158,0.16); color: #ffd2e3; font-size: 0.84rem; }
 
 .game-screen { align-items: stretch; padding-top: 0; }
@@ -102,7 +110,21 @@ button:not(:disabled):hover { transform: translateY(-1px); }
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 .avatar-wrap { display: flex; gap: 10px; align-items: center; min-width: 0; }
-.avatar-wrap img { width: 58px; height: 58px; object-fit: cover; border-radius: 18px; background: rgba(255,255,255,0.08); }
+.text-avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,95,158,0.26), rgba(121,255,225,0.16));
+  color: var(--text);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.status-avatar { width: 58px; height: 58px; }
+.mini-avatar { width: 36px; height: 36px; border-radius: 50%; font-size: 0.78rem; }
 .name-block strong { display: block; font-size: 1.05rem; }
 .name-block span, .stat { color: var(--muted); font-size: 0.9rem; }
 .gauge { height: 12px; background: rgba(255,255,255,0.12); border-radius: 999px; overflow: hidden; }
@@ -125,7 +147,7 @@ button:not(:disabled):hover { transform: translateY(-1px); }
 }
 .post-card.selected { outline: 2px solid var(--sns); }
 .post-head { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 0.88rem; margin-bottom: 8px; }
-.post-head img, .bubble-icon { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.bubble-icon { margin-bottom: 2px; }
 .post-text { line-height: 1.65; }
 .chat-row { display: flex; gap: 8px; align-items: end; }
 .chat-row.target { justify-content: flex-start; }
